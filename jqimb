@@ -1,0 +1,14 @@
+<template>
+  <div
+    class="TextInput"
+    :class="{ 'has-error': !!errorMessage, success: meta.valid }"
+  >
+    <label :for="name">{{ label }}</label>
+    <input
+      :name="name"
+      :id="name"
+      :type="type"
+      :value="inputValue"
+      @input="handleChange"
+      @blur="handleBlur"
+    />
